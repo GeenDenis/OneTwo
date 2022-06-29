@@ -16,7 +16,7 @@ namespace OneTwo
             for (int i = 0; i < 4; i++)
             {
                 Console.Write("\tLoading");
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
             }
             Console.WriteLine("");
             Console.WriteLine("\t---------------------------------\t");
