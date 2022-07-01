@@ -9,7 +9,6 @@ namespace OneTwo
     internal class Corected
     {
            public int[] AreaSystem = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            
            public static void AreaCorrected(int[] Area, int gameNumber)
         {
             Console.WriteLine("Введите номер клетки");

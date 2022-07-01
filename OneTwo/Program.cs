@@ -6,8 +6,8 @@
         {
             Corected corected = new Corected();
             int GameNumber = 1;
+            int GameStop = 0;
 
-            //public int[] AreaSystem = { 1, 2, 3, 4, 5, 6, 7, 8, 9 }; Если мы тут создаем и оправляем то все ок/ ПОБЕЖДЕНО
             Console.WriteLine("Hi! This game OTG");
             
             Console.WriteLine("This is position for game!  Ok?");
@@ -17,12 +17,17 @@
             Area.ClearArea(corected.AreaSystem);
             Fun.Timer();
 
-            for (int i = 0; i < 5; i++)
+            while (GameStop <=1)
             {
                 Corected.AreaCorrected(corected.AreaSystem, GameNumber);
                 Area.Print(corected.AreaSystem);
                 Fun.Timer();
                 GameNumber++;
+                WinTest.WinDiaganal(corected.AreaSystem);
+                WinTest.WinVertical(corected.AreaSystem);
+                WinTest.WinCenter(corected.AreaSystem);
+                Console.WriteLine("Для продолжения нажмите 0, для выхода 1");
+                GameStop = int.Parse(Console.ReadLine());
             }
 
         }
